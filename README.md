@@ -1,4 +1,4 @@
-# 🌐 My Portfolio Website  
+# 🌐 Dark mode practice 
 
 This is my personal **portfolio website** built with **HTML, CSS, and JavaScript**.  
 It includes a **Dark/Light mode toggle**, smooth animations, and a modern design.  
