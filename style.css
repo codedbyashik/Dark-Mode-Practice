@@ -1,0 +1,146 @@
+:root{
+  --bg-color:#ffffff;
+  --text-color:#222222;
+  --card-bg:#f9f9f9;
+  --accent:linear-gradient(135deg,#6a11cb,#2575fc);
+}
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --text-color: #f1f1f1;
+  --card-bg: #1b1b1b;
+  --accent: linear-gradient(135deg, #ff4e50, #f9d423);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Popins",sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem;
+  background: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo{
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.toggle-btn{
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  border: none;
+  background: none;
+  background: var(--accent);
+  font-weight: 500;
+  transition: transform 0.3s ease;
+
+}
+.toggle-btn:hover{
+  transform: scale(1.05);
+}
+.hero{
+  text-align: center;
+  padding: 5rem 2rem;
+}
+.hero h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background:var(--accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+.hero p{
+  font-size: 1.2rem;
+  opacity: 0.85;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1.3s ease-in-out;
+}
+.projects{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:1.8rem;
+  padding: 3rem 2rem;
+}
+.card{
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.card:before{
+  content: "";
+  position: absolute;
+  top:0;
+  left:-100%;
+  height: 100%;
+  width: 100%;
+  background: var(--accent);
+  opacity: 0.15;
+  transition: left 0.4s ease;
+  z-index: 0;
+}
+.card:hover::before{
+  left: 0;
+}
+.card:hover{
+  transform: translate(-8px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+.card h3{
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+.card p{
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
+}
+footer{
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to{
+    opacity: 1;
+    transform:scale(1) ;
+  }
+}
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+    transform: translateY(20px)
+  };
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
