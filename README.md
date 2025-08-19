@@ -1,6 +1,6 @@
 # 🌐 Dark mode practice 
 
-This is my personal **portfolio website** built with **HTML, CSS, and JavaScript**.  
+This is dark mode **portfolio website** built with **HTML, CSS, and JavaScript**.  
 It includes a **Dark/Light mode toggle**, smooth animations, and a modern design.  
 
 ---
@@ -23,6 +23,4 @@ It includes a **Dark/Light mode toggle**, smooth animations, and a modern design
 ## 🚀 Live Demo
 👉 [Click Here to View](https://yourusername.github.io/your-portfolio/)  
 
----
 
-## 📂 Project Structure
